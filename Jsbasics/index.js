@@ -67,5 +67,6 @@ function square(number) {
     return number*number;
 }
 console.log(square(4)); //we've two function calls here
+
 //1. console.log();
 //2. square(4);
