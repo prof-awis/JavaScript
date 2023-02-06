@@ -61,6 +61,7 @@ greet('Meshack ');
 greet('Shadrack ');
 greet(' ');
 
+
 //function that Calculating a value
 function square(number) {
     return number*number;
