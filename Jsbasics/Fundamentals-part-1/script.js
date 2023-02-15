@@ -29,7 +29,66 @@ console.log(myFirstJob);
  //JS has dynamic typing. 
 
 //boolean value
-true;
+let javascriptIsFun = true;
 console.log(true);
 
 console.log(typeof true);
+console.log(javascriptIsFun);
+console.log(typeof 23);
+console.log(typeof 'Jonas');
+
+// Dynamic typing
+javascriptIsFun = 'YES!'; // changed it from true to string YES!
+console.log(typeof javascriptIsFun);
+
+//undefined
+let year;
+console.log(year);
+console.log(typeof year);
+
+year = 1994;
+console.log(typeof year);
+
+//error in typeof. The object is defined as a bug
+console.log(typeof null);
+
+//let, const and var for declaring variables
+// var is the old fashioned way whereas let and const was introduced in js ES6
+let myAge = 20;
+myAge = 15;
+
+const birthYear = 2001; // const can never be changed
+
+/*
+birthYear = 2002;
+const job; // const cannot be undefined
+*/
+
+//Basic ooperators
+//Mathematical operator
+const now = 2022;
+const ageProf = now-2001;
+const ageManu = now-2012;
+console.log(ageProf, ageManu);
+
+console.log(ageProf * 2, ageManu / 2, 2 ** 3);
+//2 ** 3 = 2 power of 3= 8
+
+const fName = 'Awino';
+const lName = "Omondi";
+console.log(fName + ' ' + lName); //concatenation
+
+//assignment operator
+let x = 17 +13;
+x += 10;
+x *= 4;
+x ++;
+x --;
+x --;
+console.log(x);
+
+//comparison operator
+console.log(ageProf > ageManu);
+console.log(ageManu >= 18);
+
+// the order of precedence of operators in js is well defined
