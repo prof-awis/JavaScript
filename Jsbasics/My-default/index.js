@@ -3,6 +3,7 @@
    console.log("Hello World");
 
    //variables
+   //The standard way to naming them is using the camelCase notation. i.e firstName and it is not conventional to start with an upper case.
    //best way to declare variables is by using the let keyword and not the var
    let name = 'Prof Awis';
    console.log(name);
