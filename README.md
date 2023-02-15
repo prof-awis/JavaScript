@@ -2,7 +2,7 @@
 
 JavaScript is a high-level, object-oriented, multi-paradigm programming language.
 
-#Let's talk about JS in a nutshell
+# Let's talk about JS in a nutshell
 JS allows us to add dynamic effects and web application in the browser
 
 It has modern libraries and frameworks like:
