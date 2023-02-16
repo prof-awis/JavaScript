@@ -17,3 +17,14 @@
 - The <strong>typeof</strong> function.
 - The different types of <strong>Basic Operators</strong>.
 - The order of precedence of operators.
+
+# 02 JavaScript Fundamentals - Part 1 - Part 02
+
+Today I've been able to do the following:
+
+1. Strings and template literals
+2. Decision if_else statements
+3. Type conversion and Coercion
+4. Truthy and Falsy values
+5. Equality Operators: ==(loose) and ===(strict)
+6. Boolean logical operator.
