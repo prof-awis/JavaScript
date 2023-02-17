@@ -5,7 +5,7 @@
 Things entailed in this section:
 
 1. Activation of the strict mode
-2. 
+
    The strict mode is a vital in JS programming and it is a good practice when it is included is each script file.
 
    Helps to write a more secure(helps developers to avoid accidental errors) JavaScript code.
