@@ -145,8 +145,8 @@ if (birthYear <= 2000) {
    century = 21;
 }
 console.log(century);
-
-
+*/
+/*
 // Type conversion and coercion
 // Type conversion is when we manually convert from one  type to another whereas Type coercion is when js does in behind the scenes all by itself
 
@@ -211,7 +211,7 @@ if (age == 18) {
 const favourite = Number(prompt("What is your favourite number: "));
 console.log(favourite);
 console.log(typeof favourite); // the number inputed is a converted to a string in the prompt.
-*/
+
 //Boolean Logical Operators
 const hasDriversLicense = true;
 const hasGoodVision = true;
@@ -230,7 +230,7 @@ if (shouldDrive) {
 
 const isTired = false;
 console.log(hasDriversLicense && hasGoodVision && isTired );
-
+*/
 /*Coding Challenge #3
 There are two gymnastics teams, Dolphins and Koalas. They compete against each 
 other 3 times. The winner with the highest average score wins a trophy!
@@ -250,7 +250,7 @@ Test data:
 § Data 1: Dolphins score 96, 108 and 89. Koalas score 88, 91 and 110
 § Data Bonus 1: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 123
 § Data Bonus 2: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 106*/
-
+/*
 const averageDolphinScore = (97+112+101)/3;
 const averageKoalaScore = (109+95+106)/3;
 
@@ -277,3 +277,56 @@ else{
       console.log("Below the minimum 100 score hence no winner");
    }
 }
+*/
+/*
+// THe switch statement
+
+const day = 'wednesday';
+
+switch (day) {
+   case 'monday':
+      console.log("Planning for the week");
+      break;
+   case 'tuesday':
+      console.log("Designing the interface");
+      break;
+   case 'wednesday':
+   case 'Thursday':
+      console.log("Coding the solution");
+      console.log("This will be applicable to both Wednesday and Thursday");
+   case 'friday':
+      console.log("Documentation");
+      break;
+   case 'sartuday':
+   case 'sunday':
+      console.log("Resting day");
+      break;
+   default:
+      console.log("You entered an invalid Day");
+      break;
+}
+
+//Statement and Experession
+3+4
+1991
+true && false && !false
+
+//whenever sth ends with a semicolon the it is a statement
+if (23>10) {
+   const str = '23 is bigger';
+}
+
+const me = 'jonas';
+console.log("The man" + {me} + 'is ' (23+23));
+*/
+
+//The conditonal (Ternary) operator
+
+const age = 23;
+age >= 18? console.log('I like to drink wine') : console.log('I like to drink water 💦💧'); ;
+
+const drink = age>=18? 'wine🍷': 'Water';
+console.log(drink);
+
+//transpiling and polifying to change your modern javascript to the previous latest version like from ES6 to ES5(Which is supported by the earlier version like form the 2011 )
+
