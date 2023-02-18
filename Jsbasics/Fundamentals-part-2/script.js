@@ -173,7 +173,7 @@ if (friends.includes('Steven')) {
   console.log('You have a friend called Steven');
 }
 */
-
+/*
 //Introduction to objects
 // curly brackets are used to define a new object
 // this uses unstructured data whereas an array uses structured data and it is retrieved continuos
@@ -214,3 +214,46 @@ console.log(jonas);
 //challenge
 //"Jonas has 3 friends, and his best friend is called Michael"
 console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`);
+*/
+const jonas = {
+  firstName : 'Jonas',
+  lastName : 'Scheumern',
+  birthYear : 1991,
+  job  : 'Teacher',
+  friends : ['Michael', 'Peter', 'Steven'],
+  hasDriversLicense : true,
+  //any function attached to an object is called an object
+  //Here we need an expression and not a declaration
+  // calcAge : function (birthYear) {
+  //   return  2023 - birthYear;
+  //     }  
+
+//   calcAge : function () {
+//     // console.log(this);
+//     return  2023 - this.birthYear; //the THIS keyword
+//  }
+
+  calcAge : function () {
+    this.age = 2023 - this.birthYear; 
+    return this.age;
+ },
+
+ getSummary : function () {
+
+  return `${this.firstName} is a ${this.calcAge()} year old ${jonas.job}, and he has ${this.hasDriversLicense? 'a': 'no'} driver's license`
+ }
+
+};
+//DRY (Dont Repeat Yourself)
+console.log( jonas.calcAge());
+// console.log(jonas['calcAge'](1992));
+
+console.log( jonas.age);
+console.log( jonas.age);
+console.log( jonas.age);
+
+//challenge 
+//"Jonas is a 46 year old teacher, and he has a driver's license"
+console.log(`${jonas.firstName} is a ${jonas.age} year old ${jonas.job}, and he jas a driver's license`); //my way
+
+console.log(jonas.getSummary());
