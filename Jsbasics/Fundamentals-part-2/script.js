@@ -215,6 +215,8 @@ console.log(jonas);
 //"Jonas has 3 friends, and his best friend is called Michael"
 console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`);
 */
+
+/*
 const jonas = {
   firstName : 'Jonas',
   lastName : 'Scheumern',
@@ -257,3 +259,107 @@ console.log( jonas.age);
 console.log(`${jonas.firstName} is a ${jonas.age} year old ${jonas.job}, and he jas a driver's license`); //my way
 
 console.log(jonas.getSummary());
+*/
+/*
+//Iteration.. The for loop
+for (let rep = 1; rep <= 10 ; rep++) {
+  console.log(`Lifting weights repetition ${rep}`);  
+}
+
+const jonas = [
+   'Jonas',
+   'Scheumern',
+   2023 - 1991,
+   'Teacher',
+   ['Michael', 'Peter', 'Steven'],
+   true
+];
+
+const types = [];
+
+//jonas[5] does not exist
+// jonas.length makes it 
+for (let i = 0; i < jonas.length ; i++) {
+  //Reading from jonas array
+console.log(jonas[i], typeof jonas[i ]);
+
+//Filling types array
+//types[i] = typeof jonas[i];
+types.push(typeof jonas[i]);
+}
+
+console.log(types);
+
+const years = [1991, 2007, 1969, 2020];
+const ages = [];
+
+for (let i = 0; i < years.length; i++) {
+ages.push(2037 -years[i]);  
+}
+
+console.log(ages);
+  
+//continue and break
+console.log('---ONLY STRINGS ARE PRINTED---');
+for (let i = 0; i < jonas.length ; i++) {
+if (typeof jonas[i] !== 'string') {
+  continue;
+}
+ console.log(jonas[i], typeof jonas[i ]);
+}
+
+console.log('---BREAK WITH NUMBER---');
+for (let i = 0; i < jonas.length ; i++) {
+if (typeof jonas[i] === 'number') {
+  break;
+}
+ console.log(jonas[i], typeof jonas[i ]);
+}
+*/
+/*
+//Looping backwards
+const jonas = [
+  'Jonas',
+  'Scheumern',
+  2023 - 1991,
+  'Teacher',
+  ['Michael', 'Peter', 'Steven'],
+];
+for (let i = jonas.length-1 ; i >= 0; i--) {
+console.log(i, jonas[i]);  
+}
+
+//A Loop inside a Loop
+for (let exercise = 1; exercise < 4; exercise++) {
+console.log(`---Starting Exercise ${exercise}---`);
+
+for (let rep = 0; rep < 6; rep++) {
+console.log(`Exercise ${exercise}: Lifting weight repetition ${rep}`);  
+}
+}
+*/
+
+// for (let rep = 1; rep <= 10 ; rep++) {
+//   console.log(`Lifting weights repetition ${rep}`);  
+// }
+
+//The while loop
+let rep = 1;
+while (rep <= 10) {
+  console.log(`WHILE: Lifting weights repetition ${rep}`);  
+  
+  rep++;
+}
+
+//for a while loop we don't need the counter variable
+let dice = Math.trunc(Math.random() * 6); //trunc removes the decimal
+console.log(dice);
+
+while (dice !== 6) {
+  console.log(`You rolled a ${dice}`);
+  dice =Math.trunc(Math.random() * 6 +1);
+
+  if (dice === 6) {
+    console.log('Loop is about to end');
+  }
+}
