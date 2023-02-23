@@ -24,6 +24,27 @@
 
 2. Divide and conquer: Break a big problem into a smaller sub-problem.
 
-3. Don't be afraid to do as much research as you have to.
+3. Don't be afraid to do as much research as you have to.(You can use Google, ChatGpt, StackOverflow or MDN)
 
 4. For bigger problems, write pseudo-code before writing the actual code.
+
+# Debugging
+
+**Software bug:** Defect or problem in a computer program. Basically, any _unexpected or unintended behaviour_ of computer program.
+
+> Bugs are _completely normal_ in software development.
+
+The Debugging process
+
+1. Identify the bug
+   > Become aware that there is a bug. Be keen with:
+   - During the development.
+   - Testing software.
+   - Use reports during production
+   - Context: browsers , users etc
+2. Find
+   > Isolating where exactly the bug is happening in code. Use **Developer console** for simple code and **Debugger** for complex code.
+3. Fix
+   > Replace the wrong solution with the new correct solution.
+4. Prevent
+   > Preventing it from happening again. That is searching for the same bug in similar code and also writing tests using testing software.
