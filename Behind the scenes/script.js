@@ -1,5 +1,5 @@
 'use strict';
-
+/*
 function calcAge(birthYear) {
   const age = 2037 - birthYear;
   //   console.log(firstName);
@@ -39,6 +39,7 @@ const x = calcAge(1995);
 console.log(x);
 
 //! console.log(age); You cannot access the child scope
+*/
 
 //? Concept of hoisting
 
@@ -51,7 +52,7 @@ var me = 'Jonas';
 let job = 'teacher';
 const year = 1991;
 
-//hoisting with functions
+//?hoisting with functions
 console.log(addDecl(3, 5));
 // console.log(addExpr(1, 3)); Uncaught ReferenceError: Cannot access 'addExpr' before initialization
 // console.log(addArrow(5, 5)); Uncaught ReferenceError: Cannot access 'addArrow' before initialization
@@ -67,3 +68,21 @@ const addExpr = function (a, b) {
 const addArrow = (a, b) => {
   return a + b;
 };
+
+//? Example in Hoisting
+console.log(undefined);
+if (!numProducts) deleteShoppingCart();
+
+var numProducts = 10;
+
+function deleteShoppingCart() {
+  console.log('All products deleted!');
+}
+
+var x = 1;
+let y = 2;
+const z = 3;
+
+console.log(x === window.x);
+console.log(y === window.y);
+console.log(z === window.z);
