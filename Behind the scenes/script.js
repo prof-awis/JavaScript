@@ -40,7 +40,7 @@ console.log(x);
 
 //! console.log(age); You cannot access the child scope
 */
-
+/*
 //? Concept of hoisting
 
 //Hoisting with variables
@@ -86,3 +86,44 @@ const z = 3;
 console.log(x === window.x);
 console.log(y === window.y);
 console.log(z === window.z);
+*/
+
+//*The concept of the THIS keyword/variable
+//it is a special variable created for every execution context(every fuction)
+//takes the value of (points to) the 'owner' of the function in which the **this** keyword is used
+console.log(this); // global object which is the window object
+
+const calcAge = function (birthYear) {
+  const age = 2037 - birthYear;
+  console.log(age);
+  console.log(this); //undefince because it is in strict mode else it will be a global object
+};
+
+calcAge(1991);
+
+const calcAgeArrow = birthYear => {
+  const age = 2037 - birthYear;
+  console.log(age);
+  console.log(this); //!Not undefined because arrow function use the lexical this keyword hence global object (window)
+};
+calcAgeArrow(1980);
+
+const jonas = {
+  year: 1991,
+  calcAge: function () {
+    console.log(this);
+    console.log(2037 - this.year);
+  },
+};
+
+jonas.calcAge();
+
+const matilda = {
+  year: 2017,
+};
+
+matilda.calcAge = jonas.calcAge; //method borrowig
+matilda.calcAge(); //points to object calling the method
+
+const f = jonas.calcAge;
+f(); //regular function that is not an object hence the error !cannot read properties of undefined (reading 'year')
