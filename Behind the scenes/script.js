@@ -87,7 +87,7 @@ console.log(x === window.x);
 console.log(y === window.y);
 console.log(z === window.z);
 */
-
+/*
 //*The concept of the THIS keyword/variable
 //it is a special variable created for every execution context(every fuction)
 //takes the value of (points to) the 'owner' of the function in which the **this** keyword is used
@@ -104,7 +104,7 @@ calcAge(1991);
 const calcAgeArrow = birthYear => {
   const age = 2037 - birthYear;
   console.log(age);
-  console.log(this); //!Not undefined because arrow function use the lexical this keyword hence global object (window)
+  console.log(this); //!Not undefined because arrow function use the lexical this keyword (does not get its own this keyword)hence global object (window)
 };
 calcAgeArrow(1980);
 
@@ -127,3 +127,51 @@ matilda.calcAge(); //points to object calling the method
 
 const f = jonas.calcAge;
 f(); //regular function that is not an object hence the error !cannot read properties of undefined (reading 'year')
+*/
+
+// var firstName = 'Matilda'; //!Another reason we shouldn't use the var keyword
+const jonas = {
+  firstName: 'Jonas',
+  year: 1991,
+  calcAge: function () {
+    console.log(this);
+    console.log(2037 - this.year);
+    //*Solution 1
+    // const self = this; //self or that
+    // const isMillenial = function () {
+    //   console.log(self);
+    //   console.log(self.year >= 1981 && self.year <= 1996);
+    //   // console.log(this.year >= 1981 && this.year <= 1996);
+    // };
+
+    //*Solution 2
+    const isMillenial = () => {
+      // the arrow fucntion uses the *this* keyword from the parent scope
+      console.log(this);
+      console.log(this.year >= 1981 && this.year <= 1996);
+    };
+    isMillenial();
+  },
+
+  greet: () => {
+    //never use an arrow function in an object
+    console.log(this);
+    console.log(`Hey ${this.firstName}`);
+  },
+};
+
+jonas.greet();
+jonas.calcAge();
+
+//Arguments keyword
+const addExpr = function (a, b) {
+  console.log(arguments);
+  return a + b;
+};
+addExpr(3, 6);
+addExpr(3, 6, 5, 3, 7);
+
+var addArrow = (a, b) => {
+  return a + b;
+};
+addArrow(arguments); //! argument keyword only exists in regular functions
