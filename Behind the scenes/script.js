@@ -128,7 +128,7 @@ matilda.calcAge(); //points to object calling the method
 const f = jonas.calcAge;
 f(); //regular function that is not an object hence the error !cannot read properties of undefined (reading 'year')
 */
-
+/*
 // var firstName = 'Matilda'; //!Another reason we shouldn't use the var keyword
 const jonas = {
   firstName: 'Jonas',
@@ -175,3 +175,60 @@ var addArrow = (a, b) => {
   return a + b;
 };
 addArrow(arguments); //! argument keyword only exists in regular functions
+*/
+
+//* Objects vs. primitives
+let age = 30;
+let oldAge = age;
+age = 31;
+console.log(age); //31
+console.log(oldAge); //30
+
+//reference values
+const me = {
+  name: 'Jonas',
+  age: 30,
+};
+const friend = me;
+friend.age = 27;
+console.log('Friend:', friend);
+// Friend: {name: 'Jonas', age: 27}
+console.log('Me', me);
+//Me: {name: 'Jonas', age: 27}
+
+// Primitives vs. Objects in Practice
+
+// Primitive types
+let lastName = 'Williams';
+let oldLastName = lastName;
+lastName = 'Davis';
+console.log(lastName, oldLastName);
+
+// Reference types
+const jessica = {
+  firstName: 'Jessica',
+  lastName: 'Williams',
+  age: 27,
+};
+const marriedJessica = jessica;
+marriedJessica.lastName = 'Davis';
+console.log('Before marriage:', jessica);
+console.log('After marriage: ', marriedJessica);
+// marriedJessica = {};
+
+// Copying objects
+const jessica2 = {
+  firstName: 'Jessica',
+  lastName: 'Williams',
+  age: 27,
+  family: ['Alice', 'Bob'],
+};
+
+const jessicaCopy = Object.assign({}, jessica2);
+jessicaCopy.lastName = 'Davis';
+
+jessicaCopy.family.push('Mary');
+jessicaCopy.family.push('John');
+
+console.log('Before marriage:', jessica2);
+console.log('After marriage: ', jessicaCopy);
