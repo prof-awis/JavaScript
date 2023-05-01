@@ -1,3 +1,4 @@
+/*
 //this is my first Js code
 //node is a runtime environment for executing javascript
 console.log("Hello World");
@@ -120,3 +121,73 @@ const newAwis = {
 };
 
 console.log(newAwis);
+*/
+
+/*
+//* Fibonnacci series
+
+const number = parseInt(prompt("Enter the number of series: "));
+
+let n1 = 0,
+  n2 = 1,
+  nextNumber;
+
+for (let i = 0; i < number; i++) {
+  // const element = array[i];
+  console.log(n1);
+  nextNumber = n1 + n2;
+  n1 = n2;
+  n2 = nextNumber;
+}
+*/
+
+//*Block pattern
+let n = 10;
+let count = "";
+for (let i = 0; i < n; i++) {
+  for (let j = 0; j < n; j++) {
+    count += j;
+    count += "\t";
+  }
+  count += "\n";
+}
+console.log(count);
+
+//*Left triangle pattern
+let string = "";
+for (let i = 1; i <= n; i++) {
+  for (let k = 0; k < i; k++) {
+    string += k;
+    string += "\t";
+  }
+  string += "\n";
+}
+console.log(string);
+
+//*right triangle pattern
+let space = "";
+for (let i = 1; i <= n; i++) {
+  for (let j = 0; j < n - i; j++) {
+    space += "\t";
+  }
+  for (let k = 0; k < i; k++) {
+    space += k;
+    space += "\t";
+  }
+  space += "\n";
+}
+console.log(space);
+
+//*pyramid pattern
+let pyramid = "";
+for (let i = 1; i <= n; i++) {
+  for (let j = 0; j < n - i; j++) {
+    pyramid += "\t";
+  }
+  for (let k = 0; k < 2 * i - 1; k++) {
+    pyramid += k;
+    pyramid += "\t";
+  }
+  pyramid += "\n";
+}
+console.log(pyramid);
